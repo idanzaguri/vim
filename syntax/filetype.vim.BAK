@@ -1,0 +1,23 @@
+" my filetype file
+
+augroup filetypedetect
+
+  au! BufRead,BufNewFile *.vr	setfiletype vera
+  au! BufRead,BufNewFile *.vrh	setfiletype vera
+  au! BufRead,BufNewFile *.vri	setfiletype vera
+  au! BufRead,BufNewFile *.vshell	setfiletype vera  
+  au! BufRead,BufNewFile *.everilog	setfiletype verilog
+  au! BufRead,BufNewFile *.everilog+ setfiletype verilog
+  au! BufRead,BufNewFile *.tsk		setfiletype verilog
+  au! BufRead,BufNewFile *.mon		setfiletype verilog
+  au! BufRead,BufNewFile *.con		setfiletype verilog
+  au! BufRead,BufNewFile *.cbv		setfiletype verilog
+  au! BufRead,BufNewFile *.sig		setfiletype verilog
+  
+  au! BufRead,BufNewFile *.ads		setfiletype tcl
+  au! BufRead,BufNewFile *.ads+		setfiletype tcl
+  au! BufRead,BufNewFile *.debug	setfiletype tcl  
+
+  au! BufRead,BufNewFile *.status   setfiletype abaqus
+augroup END
+

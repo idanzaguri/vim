@@ -1,0 +1,94 @@
+syn clear
+
+" A bunch of useful log keywords
+syn keyword logStatement	SNUM snum UCODE ucode RISC risc HARDWARE SDS
+
+" bein/end and fork/join stand out a little more than normal statements
+"syn keyword logLabel           ser_selection
+"syn keyword logConditional     if else case default 
+"syn keyword logRepeat          repeat while for
+
+" predefined log tasks
+" String methods and cologge methods are not listed in the log.vim file
+"syn keyword logTask		alloc assoc_index boundary
+
+syn keyword logTodo contained TODO
+
+"syn match   logOperator "[&|~><!)(*#%@+/=?:;}{,.\^\-\[\]]"
+
+"syn region  logComment start="/\*" end="\*/" contains=logTodo
+"syn match   logComment "//.*" contains=logTodo
+
+"syn match   logGlobal "`[a-zA-Z0-9_]\+\>"
+
+"syn match   logConstant "\<[A-Z][A-Z0-9_]\+\>"
+
+"syn match   logNumber "\(\<[0-9]\+\|\)'[bdh][0-9a-fxzA-FXZ_]\+\>"
+"syn match   logNumber "\<[+-]\=[0-9]\+\>"
+
+"syn region  logString start=+"+  end=+"+
+
+" predefined log constants
+"syn keyword logConst	stderr stdin stdout
+
+
+"copied these from the c.vim file and modified
+"syn region logPreCondit start="^\s*#\s*\(if\>\|ifdef\>\|ifndef\>\|elif\>\|else\>\|endif\>\)" skip="\\$" end="$" contains=logComment,logString,logCharacter,logNumber
+"syn region logIncluded contained start=+"+ skip=+\\\\\|\\"+ end=+"+
+"syn match logIncluded contained "<[^>]*>"
+syn match logTodo 		"\[.*checker\d"
+syn match logDeprecated 	"ERROR"
+syn match logDeprecated 	"error"
+syn match logNumber		"\[.*dispatch._mon"
+syn match logLabel		"\[.*spr_mon_.*\s"
+syn match logConditional	"\[.*ser_selection"
+syn match logGlobal		"\[.*ce_sched_rc1"
+syn match logComment		"\[.*ce_sched_regs"
+"syn region logDefine		start="^\s*#\s*\(define\>\|undef\>\)" skip="\\$" end="$" contains=ALLBUT,logPreCondit,logIncluded,logInclude,logDefine,logOperator
+"syn region logPreProc start="^\s*#\s*\(pragma\>\|line\>\|warning\>\|warn\>\|error\>\)" skip="\\$" end="$" contains=ALLBUT,logPreCondit,logIncluded,logInclude,logDefine
+
+
+" Add deprecated constructs here.
+"syn keyword logDeprecated simwave_plot mailbox_send mailbox_receive
+"syn keyword logDeprecated vhdl_node verilog_node 
+"syn keyword logDeprecated bind_var get_bind get_bind_id
+"syn keyword logDeprecated call_func call_task close_conn get_conn_err
+"syn keyword logDeprecated make_client make_server up_connections
+
+"Modify the following as needed.  The trade-off is performance versus
+"functionality.
+syn sync lines=75
+
+if !exists("did_log_syntax_inits")
+  let did_log_syntax_inits = 1
+ " The default methods for highlighting.  Can be overridden later
+
+  hi link logCharacter       Character
+  hi link logConditional     Conditional
+  hi link logRepeat          Repeat
+  hi link logString          String
+  hi link logTodo            Todo
+
+  hi link logDefine	Macro
+  hi link logInclude	Include
+  hi link logIncluded	String
+  hi link logComment   Comment
+  hi link logConstant  Constant
+  hi link logLabel     PreCondit
+  hi link logPreCondit PreCondit
+  hi link logNumber    Special
+  " hi link logOperator  Type
+  " hi link logOperator  Operator
+  " hi link logStatement Statement
+  hi link logStatement Type
+  hi link logGlobal    String
+  hi link logTask	Statement
+  hi link logConst	Statement
+
+  hi link logDeprecated	Error
+endif
+
+let b:current_syntax = "log"
+
+" vim: ts=8
+

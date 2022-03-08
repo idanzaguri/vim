@@ -1,0 +1,109 @@
+" Vim
+" An example for a gvimrc file.
+" The commands in this are executed when the GUI is started.
+"
+" To use it, copy it to
+"     for Unix and OS/2:  ~/.gvimrc
+"             for Amiga:  s:.gvimrc
+"  for MS-DOS and Win32:  $VIM\_gvimrc
+
+" Make external commands work through a pipe instead of a pseudo-tty
+"set noguipty
+
+" set the X11 font to use
+" set guifont=-misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-1
+" set guifont=-misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-1
+
+" Make command line two lines high
+" set ch=2
+
+" Only do this for Vim version 5.0 and later.
+if version >= 500
+
+  "set guifont=courier-16
+  set guifont=10x20
+  "set guifont=courier-bold18
+  "set guifont=courier-18
+  
+  
+  " I like highlighting strings inside C comments
+  let c_comment_strings=1
+
+  " Switch on syntax highlighting.
+  syntax on
+  " syntax off
+
+  " Switch on search pattern highlighting.
+  set hlsearch
+  "
+  set incsearch
+  
+  " Hide the mouse pointer while typing
+  set mousehide
+
+  " Set nice colors
+  " background for normal text is light grey
+  " Text below the last line is darker grey
+  " Cursor is green
+  " Constants are not underlined but have a slightly lighter background
+  " highlight Normal guibg=grey90 guifg=white
+  
+  highlight Normal gui=bold guibg=midnightblue guifg=white 
+  "highlight Normal guibg=midnightblue guifg=lavender
+  
+  "highlight Cursor guibg=Red guifg=NONE
+  "highlight NonText guibg=grey80
+  "highlight Constant gui=NONE guibg=grey80
+  "highlight Special gui=NONE guibg=grey80
+  
+  highlight Cursor guibg=magenta guifg=black
+  highlight NonText guifg=yellow
+  highlight Constant gui=NONE guifg=green
+  highlight Special gui=NONE guifg=cyan 
+  "highlight Special gui=NONE guifg=lavender
+  highlight Statement gui=bold guifg=red 
+  highlight Comment gui=NONE guifg=yellow
+  highlight Define gui=NONE guifg=orange
+  highlight SpecialComment gui=NONE guifg=pink
+  
+
+  
+  " Perl Colors
+  " highlight Label gui=NONE guifg=yellow
+  " highlight Conditional gui=NONE guifg=pink
+  " highlight Repeat gui=NONE guifg=green
+  " highlight Operator gui=NONE guifg=orange
+  " highlight perlStatement gui=NONE guifg=red
+  
+  " highlight perlString gui=NONE guifg=green
+  " highlight Character gui=NONE guifg=cyan
+  " highlight perlMatch gui=NONE guifg=orange
+  " highlight Number gui=NONE guifg=cyan
+  " highlight Typedef gui=NONE guifg=pink
+  " highlight perlType gui=NONE guifg=pink
+  " highlight Include gui=NONE guifg=orange
+  " highlight Type gui=NONE guifg=cyan
+  " highlight Todo gui=NONE guifg=yellow
+  
+  highlight perlSpecial gui=NONE guifg=cyan
+  highlight PreProc gui=NONE guifg=red
+  highlight perlComment gui=NONE guifg=yellow
+  highlight perlStatement gui=NONE guifg=red
+  highlight String gui=NONE guifg=green
+ 
+  highlight perlVarPlain gui=NONE guifg=white
+  highlight perlVarMember gui=NONE guifg=white
+  highlight perlVarNotInMatches gui=NONE guifg=white
+  highlight perlVarSlash gui=NONE guifg=white
+
+  
+  " diable cursir blinking
+  set gcr=a:blinkon0
+	
+  set ic
+
+  set bg=dark
+  
+  set background=dark
+
+endif

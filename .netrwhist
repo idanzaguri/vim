@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/projects/aspen/home/idanz/ne_top/verif/environments/ne_tx_top/src/cfgu'
+let g:netrw_dirhist_2='/projects/aspen/home/idanz/ne_top/verif/environments/common/global/src'
+let g:netrw_dirhist_3='/projects/aspen/home/idanz/parser_ulv/verif/environments/ne_parser/src/cfgu'
+let g:netrw_dirhist_4='/projects/aspen/home/idanz/ne_top'
+let g:netrw_dirhist_5='/projects/aspen/home/idanz/ne_top/sim/regressions/ne_ulv_2022.02.28-R1/coverage/reports'
+let g:netrw_dirhist_6='/projects/aspen/home/idanz/ne_top/sim/regressions/ne_ulv_2022.02.28-R1/coverage/reports/ne_classifier'
+let g:netrw_dirhist_7='/projects/aspen/home/idanz/ne_top/sim/regressions/ne_ulv_2022.02.28-R1/coverage/reports'
+let g:netrw_dirhist_8='/projects/aspen/home/idanz/ne_regr'
